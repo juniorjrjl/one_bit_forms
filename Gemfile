@@ -6,6 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'omniauth'
+gem 'devise_token_auth', '~> 0.1.42'
+gem 'rack-cors'
+gem 'rack-attack'
+ 
+gem 'friendly_id', '~> 5.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
@@ -27,6 +33,9 @@ gem 'puma', '~> 3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_bot_rails'
+  gem 'ffaker'
   gem 'byebug', platform: :mri
 end
 

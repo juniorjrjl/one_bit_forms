@@ -20,6 +20,11 @@ services:
       - '3000:3000'
     volumes:
       - '.:/onebitforms'
+    environment: 
+      - BUNDLE_PATH=/box
+      - DB_HOST=postgres
+      - DB_USER=postgres
+      - DB_PASS=postgres
     volumes_from:
     - box
  
