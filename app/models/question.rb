@@ -1,4 +1,5 @@
 class Question < ApplicationRecord
+  default_scope { order(order: :asc) }
   belongs_to :form
   has_many :questions_answers, dependent: :destroy
   validates :title, :kind, :form, presence: true  
